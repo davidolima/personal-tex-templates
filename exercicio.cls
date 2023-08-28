@@ -63,7 +63,7 @@
 % Comandos personalizados -------------------
 \newcommand{\cl}[0]{\Vdash}
 \newcommand{\gto}[2]{\underset{#2}{\stackrel{#1}{\to}}}
-\newcommand{\resposta}[0]{\\\indent\textbf{$\rotatebox[origin=c]{180}{$\Lsh$}$\hspace{1mm}Resposta:}\hspace{2.5mm}}
+\newcommand{\resposta}[0]{~\\\indent\textbf{$\rotatebox[origin=c]{180}{$\Lsh$}$\hspace{1mm}Resposta:}\hspace{2.5mm}}
 
 \newcommand{\professor}[1]{ \newcommand{\professorloc}{#1} }
 \newcommand{\curso}[1]{ \newcommand{\cursolocal}{#1} }
@@ -92,12 +92,13 @@
   \setcounter{numcntr}{0}
   \newcommand{\letra}{%
     \stepcounter{letracntr}%
-    ~\newline\indent\alph{letracntr})
+    ~\newline\indent\alph{letracntr})\hspace{0.05cm}
   }
   \newcommand{\num}{%
     \stepcounter{numcntr}%
-    ~\newline\indent\arabic{numcntr}.
+    ~\newline\indent\arabic{numcntr}.\hspace{0.1cm}
   }
+
   \stepcounter{exerciciocntr}%
   \hypertarget{exercicio-#1}{}%
   \bookmark[dest=exercicio-#1]{Exercício #1}%
